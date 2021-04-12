@@ -110,7 +110,7 @@ func (r *inmemoryGateway) SaveData(ctx context.Context, obj *entity.RawData) err
 		}
 	}
 
-	for _, word := range strings.Split(obj.Title, " ") {
+	for _, word := range strings.Split(obj.Content, " ") {
 
 		word = strings.ToLower(word)
 		word = reg.ReplaceAllString(word, "")
