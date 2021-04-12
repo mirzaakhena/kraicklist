@@ -6,7 +6,7 @@ In this repository you will find simple web app for fictional startup called Kra
 
 Currently the app is just rough prototype. The search is case sensitive, limited to exact matches, & the search result is pretty much could be further improved.
 
-You could see the live version of this app [here](https://gentle-forest-97151.herokuapp.com/). Try searching for "iPhone" to see some results.
+You could see the live version of this app [here](https://kraicklist.herokuapp.com/). Try searching for "iPhone" to see some results.
 
 ## Your Mission
 
