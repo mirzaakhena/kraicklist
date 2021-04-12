@@ -133,6 +133,8 @@ func (r *inmemoryGateway) FindDataByKeyword(ctx context.Context, keyword string)
 	result := []*entity.RawData{}
 	containedKeywords := []string{}
 
+	mapID := map[int64]int{}
+
 	for keyPerWord, values := range r.IndexedData {
 
 		if strings.Contains(keyPerWord, keyword) {
@@ -143,7 +145,11 @@ func (r *inmemoryGateway) FindDataByKeyword(ctx context.Context, keyword string)
 
 				for _, value := range values {
 					if keyID == value {
-						result = append(result, data)
+						if _, exist := mapID[data.ID]; !exist {
+							result = append(result, data)
+							mapID[data.ID] = 1
+						}
+
 					}
 
 				}
